@@ -1,0 +1,48 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.container {
+
+}
+
+.main-header {
+  display: flex;
+  flex-direction: raw;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: raw;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+searchbar-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* SearchBar */
+
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbar-title {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+}
+
