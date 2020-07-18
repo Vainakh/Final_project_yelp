@@ -1,48 +1,261 @@
-body {
+
+/* Business.css =========================================================================================*/
+
+ .business {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16.66rem;
+  margin: 0 .5rem 2.3rem .5rem;
+  border: 3px solid #d90007;
+  padding: 20px;
   background-color: white;
-  color: black;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.container {
+.business .business-image-container {
+  height: 16.66rem;
+  margin-bottom: 1rem;
+}
 
+.business h2 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Baloo Tammudu 2', cursive;
+  color: #d90007;
+}
+
+.business-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-info p {
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1rem;
+}
+
+.business-info-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.business-info-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.business-info-reviews h3 {
+  color:  #d90007;
+  font-weight: 600;
+}
+
+.business-info-reviews .rating {
+  font-size: .88rem;
+  line-height: 1rem;
+}
+
+/* Businesses.css ========================================================================*/
+.Businesses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 4.4rem 10%;
+  background-color: black;
+  padding: 40px 30px;
+}
+
+/* SearchBar.css ==========================================================================*/
+.search-bar-container {
+  color: black;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-image: url(''); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25rem;
+  background-color: black;
+}
+
+.search-bar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: raw;
+  justify-content: space-evenly;
+}
+
+.search-bar-sort-by-options ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.22rem;
+  color: #ffffff;
+}
+
+.search-bar-sort-by-options li {
+  cursor: pointer;
+  width: 4.33rem;
+  padding: 0 5rem .33rem 2.58rem;
+  line-height: 1.13;
+  text-align: center;
+  font-weight: 600;
+  font-size: .83rem;
+  transition: color .25s;
+}
+
+.search-bar-sort-by-options li:hover {
+  color: #d4cfcf;
+}
+
+.search-bar-sort-by-options li.active,
+.search-bar-sort-by-options li.active:hover {
+  color: #d90007;
+  transform: scale(1.4);
+}
+
+.search-bar-fields {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.88rem;
+}
+
+.search-bar-fields input {
+  width: 21rem;
+  padding: .66rem 1rem;
+  margin-right: 2.22rem;
+  border: 1px solid #d90007;
+  border-radius: 4px;
+  font-size: .77rem;
+  font-weight: 500;
+}
+
+.search-bar-fields input:last-child {
+  margin-right: 0;
+}
+
+.search-bar-submit {
+  text-align: center;
+  font-size: 20px;
+}
+
+.search-bar-submit a {
+  border-radius: 4px;
+  padding: .8rem 5rem;
+  background-color: white;
+  border: 3px solid #d90007;
+  color: #d90007;
+  font-weight: 600;
+  transition: background-color .5s;
+}
+
+.search-bar-submit a:hover {
+  cursor: pointer;
+  background-color: #090909;
+}
+
+.search-bar-title {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  background-color: #090909;
+}
+
+   /* @media only screen and (max-width: 560px) {
+  .searchbar {
+    background-image: url('./background_search_mobile.jpg');
+  }  */
+
+  .search-bar-sort-by-options ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .search-bar-fields {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar-fields input {
+    margin-right: 0;
+    margin-bottom: .86rem;
+  }
+}
+
+/* App.css =====================================================================================*/
+
+/* Universal Styles */
+
+html {
+  font-size: 18px;
+  background-color: black;
+}
+
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Reusable Component - Image Container */
+
+.business-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.business-image-container img {
+  width: 100%;
+}
+
+.auth-container {
+  display: flex;
+  border: 1px solid #e90f1a;
+  padding: 20px 30px;
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+}
+
+/* App Styles */
+
+.App {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  padding: .66rem 0;
+  text-align: center;
+  /* background-color: #e90f1a; */
+  font-family: Poppins, sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  
 }
 
 .main-header {
   display: flex;
   flex-direction: raw;
-  justify-content: center;
   justify-content: space-evenly;
+  background-color: black;
+  color: white;
 }
 
-.auth-container {
-  display: flex;
-  flex-direction: raw;
-  justify-content: center;
-  justify-content: space-between;
-}
-
-searchbar-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* SearchBar */
-
-.searchbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.searchbar-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-.searchbar-title {
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
+.container {
+  background-color: black;
 }
 

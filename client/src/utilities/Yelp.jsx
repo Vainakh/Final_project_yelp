@@ -1,15 +1,20 @@
-const apiKey = 'hzkML4S-4IZV-EtajLaNGe7fZj_TnYk4OPaZyHJCpQ2Om-suEF85OuumfO9pNjOgMi6WEOI2Svi8O_QY5pKlitR_d3XS0yjK5A4BzPyRlo4o1BrUIdCRmlHwhr76XnYx';
+
+const apiKey = 'z0NpnthOZGyCbiUjBFeBAOvCnRhRL5yphDbKtxV8KH97PcONU3owXcgYIkh_EZMiIuKqM1_C5l79zIrEgG6Q0Gk1AdjbC1Zc9fylzQ9dC3JMWt6vSrKm04rU3kULX3Yx';
 const Yelp = {
   search(term, location, sortBy){
-    //  return a promise that will ultimately resolve to our list of businesses.
+    // console.log(term);
+    // console.log(location);
+    // console.log(sortBy);
+    // console.log("this is fetch:" + fetch)
    return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
     headers : {
       Authorization :`Bearer ${apiKey}`
     }
-   }) //fetch /businesses endpoint
+   }) 
    .then((response) => response.json())
    .then((jsonResponse) => {
-     if (jsonResponse.businesses) {  //jsonResponse has a businesses key, valid business
+     console.log(response)
+     if (jsonResponse.businesses) { 
        return jsonResponse.businesses.map(business => ({
          id : business.id,
          imageSrc: business.image_url,
